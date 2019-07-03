@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 45px auto;
+}
+.container > h2 {
+  width: 150px;
+  margin: auto;
+  justify-content: space-between;
+}
+div[data-create="createJobs"] {
+  width: 95%;
+  height: 50px;
+  margin: 25px auto;
+  transition: all .8s linear;
+}
+hr {
+  width: 95%;
+  margin: 20px auto;
+}
+input[type="text"] {
+  position: relative;
+  padding: 0 45px;
+  width: 100%;
+  height: 50px;
+  border-color: transparent transparent orangered transparent;
+  background-color: #f7f7f7;
+  box-sizing: border-box;
+  outline: none;
+  border-radius: 3px;
+}
+input[type="text"]:focus {
+  background-color: antiquewhite;
+  color: #ff3300;
+}
+div[data-create="createJobs"]::after {
+  position: absolute;
+  content: '';
+  top: 84px;
+  left: 70px;
+  border: 10px solid;
+  border-color: transparent transparent #000 transparent;
+  transition: all .8s linear;
+  opacity: .0;
+}
+div[data-create="createJobs"]::before {
+  position: absolute;
+  content: 'Digite sua tarefa e click Emter para salvar!';
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+  top: 104px;
+  left: 54px;
+  padding: 0 3px;
+  box-sizing: border-box;
+  z-index: 99;
+  transition: all .8s linear;
+  opacity: .0;
+}
+div[data-create="createJobs"]:hover::after, div[data-create="createJobs"]:hover::before {
+  opacity: .9;
+}
+.taskStyles {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 95%;
+  height: 50px;
+  text-transform: capitalize;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  margin-top: 2px;
+  line-height: 50px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-bottom-color: #09ff00;
+  border-bottom-width: 2px;
+  border-radius: 3px;
+}
+div[data-done="doneTasks"] > h3, div[data-await="awaitTasks"] > h3{
+  display: flex;
+  width: 150px;
+  margin: auto;
+  color: #252525c9;
+}
+
+.pending {
+  border-bottom-color: #19d2d2;
+  border-bottom-width: 2px;
+}
+
+div[data-await="awaitTasks"] span:nth-child(1) {
+  position: absolute;
+  right: 150px;
+}
+div[data-await="awaitTasks"] button:nth-child(2) {
+  border-color: #09ff00;
+  position: absolute;
+  right: 70px;
+  width: 60px;
+  height: 40px;
+  border-radius: 20px 0 0 20px;
+}
+div[data-await="awaitTasks"] button:nth-child(3) {
+  border-color: #ff3300;
+  position: absolute;
+  right: 8px;
+  width: 60px;
+  height: 40px;
+  border-radius: 0 20px 20px 0;
+}
+button {
+  background-color: #fff;
+  border: 1px solid;
+  border-color: #ccc;
+  outline: none;
+}
+button:active {
+  background-color: #fff;
+  border: 2px solid;
+  border-color: #282828;
+}
+div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
+  font-size: 12px;
+  font-weight: bold;
+  color: #282828;
+}
