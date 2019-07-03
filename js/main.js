@@ -8,6 +8,10 @@ $createTask.addEventListener('keyup', evt => {
       createAt);
     $createTask.value = '';
     $createTask.focus;
+    setTimeout(() => {
+      finishedStorage();
+      pendingStorage()
+    }, 1500);
   }
 });
 
@@ -22,8 +26,10 @@ $actionTask.forEach(taskListener => {
       case 'finished':
         const finishedAt = ' - FINALIZADA: '+new Date().toLocaleString();
         taskDone(nodes, finishedAt);
-        setTimeout(finishedStorage, 2000);
-        setTimeout(pendingStorage, 2000);
+        setTimeout(() => {
+          finishedStorage();
+          pendingStorage()
+        }, 1500);
         break;
       default:
         console.log('err');
