@@ -1,6 +1,10 @@
 const $createTask = document.querySelector('[placeholder="Create Task"]');
 const $actionTask = [...document.querySelectorAll('[data-await="awaitTasks"]')];
 
+const globals = {
+  keyTimeout: '',
+};
+
 $createTask.addEventListener('keyup', evt => {
   if (evt.keyCode == 13 && $createTask.value.length >= 3) {
     const createAt = new Date().toLocaleString();
@@ -8,10 +12,7 @@ $createTask.addEventListener('keyup', evt => {
       createAt);
     $createTask.value = '';
     $createTask.focus;
-    setTimeout(() => {
-      finishedStorage();
-      pendingStorage()
-    }, 1500);
+    saveInterval();
   }
 });
 
@@ -26,10 +27,7 @@ $actionTask.forEach(taskListener => {
       case 'finished':
         const finishedAt = ' - FINALIZADA: '+new Date().toLocaleString();
         taskDone(nodes, finishedAt);
-        setTimeout(() => {
-          finishedStorage();
-          pendingStorage()
-        }, 1500);
+        saveInterval();
         break;
       default:
         console.log('err');
@@ -148,7 +146,19 @@ document.querySelectorAll('.actionsOptions, button').forEach(button => {
       window.localStorage.setItem('finished', '[]');
       return 0;
     };
+    clearTimeout(globals.keyTimeout);
+    document.querySelector('#save').disabled = true;
     finishedStorage();
     return 0;
   });
 })
+
+const saveInterval = () => {
+  document.querySelector('#save').disabled = false;
+  globals.keyTimeout = setTimeout(() => {
+    finishedStorage();
+    pendingStorage()
+    document.querySelector('#save').disabled = true;
+  }, 20000);
+  return 0;
+}

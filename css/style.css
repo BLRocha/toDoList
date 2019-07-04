@@ -164,3 +164,7 @@ div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
   background-color: #ff3300e0;
   color: #f7f7f7;
 }
+#save:disabled {
+  background-color: #d8d8d8;
+  border-color: #09ff009f;
+}
