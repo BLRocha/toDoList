@@ -149,6 +149,7 @@ document.querySelectorAll('.actionsOptions, button').forEach(button => {
     clearTimeout(globals.keyTimeout);
     document.querySelector('#save').disabled = true;
     finishedStorage();
+    pendingStorage();
     return 0;
   });
 })
@@ -157,7 +158,7 @@ const saveInterval = () => {
   document.querySelector('#save').disabled = false;
   globals.keyTimeout = setTimeout(() => {
     finishedStorage();
-    pendingStorage()
+    pendingStorage();
     document.querySelector('#save').disabled = true;
   }, 20000);
   return 0;
