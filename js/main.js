@@ -131,8 +131,24 @@ const finishedStorage = (save=true) => {
   });
   return 0;
 }
-
 document.addEventListener('DOMContentLoaded', () => {
   pendingStorage(false);
   finishedStorage(false);
 });
+
+document.querySelectorAll('.actionsOptions, button').forEach(button => {
+  button.addEventListener('click', evt => {
+    if (evt.target.id === 'dell') {
+      const $finishedTask = document.querySelectorAll('[data-done="doneTasks"]');
+        $finishedTask.forEach(nodeList => {
+          nodeList.querySelectorAll('div').forEach(divs => {
+            divs.parentNode.removeChild(divs);    
+        });
+      });
+      window.localStorage.setItem('finished', '[]');
+      return 0;
+    };
+    finishedStorage();
+    return 0;
+  });
+})

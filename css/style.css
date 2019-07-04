@@ -138,3 +138,29 @@ div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
   font-weight: bold;
   color: #282828;
 }
+
+.actionsOptions {
+  display: flex;
+  justify-content: flex-end;
+  width: 96%;
+}
+.actionsOptions > button {
+  width: 80px;
+  height: 50px;
+  margin: 10px 0;
+  color: #282828;
+  font-weight: bold;
+  transition: .3s ease-in-out;
+  border-color: #09ff00;
+  margin-left: 2px;
+}
+.actionsOptions button:nth-child(2) {
+  border-color: #ff3300;
+}
+.actionsOptions button:hover:nth-child(1) {
+  background-color: #09ff00e0;
+}
+.actionsOptions button:hover:nth-child(2) {
+  background-color: #ff3300e0;
+  color: #f7f7f7;
+}
