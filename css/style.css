@@ -86,9 +86,9 @@ div[data-create="createJobs"]:hover::after, div[data-create="createJobs"]:hover:
   line-height: 50px;
   padding: 0 5px;
   box-sizing: border-box;
-  border-bottom-color: #09ff00;
-  border-bottom-width: 2px;
+  border-left-color: #09ff00;
   border-radius: 3px;
+  border-left-width: 2px;
 }
 div[data-done="doneTasks"] > h3, div[data-await="awaitTasks"] > h3{
   display: flex;
@@ -98,8 +98,16 @@ div[data-done="doneTasks"] > h3, div[data-await="awaitTasks"] > h3{
 }
 
 .pending {
-  border-bottom-color: #19d2d2;
+  border-left-color: #19d2d2;
   border-bottom-width: 2px;
+}
+
+div[data-done="doneTasks"] > div:nth-child(even) {
+  border-top: 1px;
+  border-bottom: none;
+  border-right: none;
+  margin-top: 2px;
+  background-color: #cccccc5b;
 }
 
 div[data-await="awaitTasks"] span:nth-child(1) {
@@ -136,7 +144,7 @@ button:active {
 div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
   font-size: 12px;
   font-weight: bold;
-  color: #282828;
+  color: #01a7bd;
 }
 
 .actionsOptions {
@@ -167,4 +175,5 @@ div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
 #save:disabled {
   background-color: #d8d8d8;
   border-color: #09ff009f;
+  color: rgba(0, 0, 0, 0.555);
 }
