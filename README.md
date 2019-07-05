@@ -2,9 +2,9 @@
 
 ### Requisitos nodejs ou apache nginx
 
-## 1º Start :rocket: <code>npm i</code> ou <code>yarn</code>
-## 2º <code>npm start</code> inicia o http-server ou mode dev <code>npm run dev</code> inicia o browser-sync
-## 2-2º <code>yarn start</code> inicia o http-server ou mode dev <code>yarn dev</code> inicia o browser-sync
+## 1º Start :rocket: :truck: <code>npm i</code> ou <code>yarn</code>
+## 2º :arrow_forward: <code>npm start</code> inicia o http-server ou mode dev :construction: <code>npm run dev</code> inicia o browser-sync
+## 2-2º :arrow_forward: <code>yarn start</code> inicia o http-server ou mode dev :construction: <code>yarn dev</code> inicia o browser-sync
 
 ![image](https://i.imgur.com/phcU9mf.png)
 
@@ -17,6 +17,6 @@
 
 ### Utilitario Browser-sync
 
-[Browser-sync](https://www.browsersync.io/)
-[Browser-sync npm](https://www.npmjs.com/package/browser-sync)
-[DOC](https://www.browsersync.io/docs)
+:link: [Browser-sync](https://www.browsersync.io/)
+:link: [Browser-sync npm](https://www.npmjs.com/package/browser-sync)
+:link: [DOC](https://www.browsersync.io/docs)
