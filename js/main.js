@@ -102,7 +102,8 @@ const pendingStorage = (save=true) => {
     window.localStorage.setItem('pending', JSON.stringify(pendingTask));
     return 0;
   };
-  const getTask = JSON.parse(window.localStorage.getItem('pending'))
+  const getTask = JSON.parse(window.localStorage.getItem('pending'));
+  if (!getTask) return 1;
   getTask.forEach(task=> {
     boxModelTask(task.text, task.data);
   });
@@ -123,7 +124,8 @@ const finishedStorage = (save=true) => {
     window.localStorage.setItem('finished', JSON.stringify(finishedTask));
     return 0;
   };
-  const getTask = JSON.parse(window.localStorage.getItem('finished'))
+  const getTask = JSON.parse(window.localStorage.getItem('finished'));
+  if (!getTask) return 1;
   getTask.forEach(task=> {
     boxModelTask(task.text, task.data, false);
   });

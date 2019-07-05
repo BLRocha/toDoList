@@ -20,5 +20,3 @@
 [Browser-sync](https://www.browsersync.io/)
 [Browser-sync npm](https://www.npmjs.com/package/browser-sync)
 [DOC](https://www.browsersync.io/docs)
-
-[http-server npm](https://www.npmjs.com/package/http-server)
