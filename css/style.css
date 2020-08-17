@@ -177,3 +177,16 @@ div[data-done="doneTasks"] span, div[data-await="awaitTasks"] span{
   border-color: #09ff009f;
   color: rgba(0, 0, 0, 0.555);
 }
+
+#finished:hover {
+  transition: all .5s ease-in-out;
+  background: #09ff00e0;
+  border-color: #ff3300;
+  color: #333;
+}
+#erase:hover {
+  transition: all .5s ease-in-out;
+  background: #ff3300e0;
+  border-color: #09ff00;
+  color: #333;
+}
