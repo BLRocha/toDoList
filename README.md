@@ -1,6 +1,6 @@
 # To do List
 
-### Requisitos nodejs ou apache nginx
+### Requisitos: um servidor http/https
 
 ### 1º Start :rocket: :truck: <code>npm i</code> ou <code>yarn</code>
 #### 2º :arrow_forward: <code>npm start</code> inicia o http-server ou mode dev :construction: <code>npm run dev</code> inicia o browser-sync
