@@ -162,6 +162,6 @@ const saveInterval = () => {
     finishedStorage();
     pendingStorage();
     document.querySelector('#save').disabled = true;
-  }, 20000);
+  }, 8000);
   return 0;
 }
