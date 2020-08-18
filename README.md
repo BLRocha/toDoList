@@ -11,7 +11,7 @@
 ### Como criar tarefas!
 
 ```
-  Click no input Create task
+  Click no input para Criar uma task
   Digite sua tarefa para criar press a tecla "Enter"
 ```
 
