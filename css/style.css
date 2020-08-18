@@ -53,7 +53,7 @@ div[data-create="createJobs"]::after {
 }
 div[data-create="createJobs"]::before {
   position: absolute;
-  content: 'Digite sua tarefa e click Emter para salvar!';
+  content: 'Digite sua tarefa e click Enter para salvar!';
   text-align: center;
   width: 200px;
   height: 40px;
